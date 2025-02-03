@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+button{font-size:16px;padding:15px;border:none;border-radius:12px;color:black;margin:2px;}
+button:hover{color:white;background:black;}
+</style>
+</head>
+<body id="root">
+<center>
+<span style="visibility:hidden">&emsp;</span>
+<svg onclick="lightOn()" width=18px height=18px fill="currentColor" viewBox="0 0 20 20" id="moon" style="visibility:hidden" style="position:absolute;">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+</svg>
+<script>
+function lightOn(){document.getElementById('root').style.background='white';document.getElementById('root').style.color='black';document.getElementById('sun').style.visibility='visible';document.getElementById('moon').style.visibility='hidden';}
+</script>
+<svg onclick="lightOff()" width=20px height=20px fill="currentColor" viewBox="0 0 20 20" id="sun" style="position:relative;right:22px;">
+<path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/>
+</svg>
+<script>
+function lightOff(){document.getElementById('root').style.background='black';document.getElementById('root').style.color='white';document.getElementById('moon').style.visibility='visible';document.getElementById('sun').style.visibility='hidden';}
+</script>
+<p>
+<select id="indexer">
+<option>https://testnet.ordinals.com/content/</option>
+<option>https://ord-testnet.xverse.app/content/</option>
+<option>https://testnet-explorer.ordinalsbot.com/content/</option>
+</select>
+</p>
+<button onclick="goTo4()">4 December 2023</button>
+<script>
+function goTo4(){window.location.href=document.getElementById('indexer').value+'cce93d38c1cefa8289650b4f4779941f2281924ddcd5ddecf996107fc76b401ci0';}
+</script>
+<button onclick="goTo3()">3 December 2023</button>
+<script>
+function goTo3(){window.location.href=document.getElementById('indexer').value+'759043c4a6bdb50706d2e4a87780dc79975b609a24c996a068799bc8cc36a6dci0';}
+</script>
+<button onclick="goTo2()">2 December 2023</button>
+<script>
+function goTo2(){window.location.href=document.getElementById('indexer').value+'187a70a802db8eb9dfa3caa12f8587d55a86cc0f4665e774e2b7701572307700i0';}
+</script>
+<button onclick="goTo1()">1 December 2023</button>
+<script>
+function goTo1(){window.location.href=document.getElementById('indexer').value+'d31929836bfd17a27b145dcfe52bfefe1f7abd19fa838daeb262b8c7e1fc7d5ei0';}
+</script>
+</center>
+</body>
+</html>
